@@ -1,0 +1,23 @@
+{
+  "name": "rxs-code",
+  "version": "0.3.0",
+  "description": "Multi-Provider Terminal AI Coding Assistant — Groq + NVIDIA NIM",
+  "type": "module",
+  "bin": { "rxs-code": "./bin/rxs-code" },
+  "scripts": {
+    "dev": "node bin/rxs-code",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "groq-sdk": "^0.15.0",
+    "openai": "^4.93.0",
+    "commander": "^13.1.0",
+    "inquirer": "^12.4.0",
+    "chalk": "^5.4.0",
+    "ora": "^9.0.0",
+    "glob": "^11.0.1",
+    "dotenv": "^16.4.0",
+    "strip-ansi": "^7.1.0"
+  },
+  "engines": { "node": ">=18" }
+}

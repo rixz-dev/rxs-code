@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+import { program } from 'commander';
+import { startInteractive, runTask } from '../src/core/cli.js';
+import { readFileSync } from 'fs';
+import { resolve } from 'path';
+
+const pkg = JSON.parse(readFileSync(resolve(import.meta.dirname, '../package.json'), 'utf8'));
+
+program
+  .name('rxs-code')
+  .description('RXS Code — Terminal AI Coding Assistant')
+  .version(pkg.version)
+  .option('-p, --prompt <text>', 'run single prompt non-interactively')
+  .option('--provider <name>', 'set provider')
+  .option('--model <name>', 'set model')
+  .action(async (opts) => {
+    if (opts.prompt) {
+      await runTask(opts.prompt, opts);
+    } else {
+      await startInteractive(opts);
+    }
+  });
+
+program.parse();
