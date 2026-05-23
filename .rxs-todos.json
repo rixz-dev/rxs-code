@@ -1,0 +1,29 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "status": "pending",
+      "priority": "high",
+      "content": "Create HTML structure with semantic tags"
+    },
+    {
+      "id": 2,
+      "status": "pending",
+      "priority": "high",
+      "content": "Write CSS with animations and responsive design"
+    },
+    {
+      "id": 3,
+      "status": "pending",
+      "priority": "high",
+      "content": "Add JavaScript for interactive kinetic effects"
+    },
+    {
+      "id": 4,
+      "status": "pending",
+      "priority": "medium",
+      "content": "Final review and polish"
+    }
+  ],
+  "nextId": 5
+}
